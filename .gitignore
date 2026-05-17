@@ -1,0 +1,67 @@
+# =====================================
+# Node.js 项目标准 .gitignore 模板
+# 适配你的项目结构
+# =====================================
+
+# 依赖目录（必须忽略）
+node_modules/
+
+# 包管理缓存与临时文件
+.npm
+.pnpm
+.yarn/
+.yarn-cache/
+.npmignore
+
+# 日志文件
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+logs/
+
+# 运行时数据
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# 环境变量（敏感信息）
+.env
+.env.*
+!.env.example
+
+# 构建与测试产物
+dist/
+build/
+out/
+coverage/
+.nyc_output/
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# 编辑器/IDE配置
+.vscode/
+.vs/
+.idea/
+*.iml
+*.iws
+*.ipr
+*.swp
+*.swo
+*~
+
+# 系统文件
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# 其他临时文件
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+.eslintcache

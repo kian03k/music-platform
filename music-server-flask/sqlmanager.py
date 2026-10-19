@@ -1,12 +1,16 @@
+import os
+
 import pymysql
 from pymysql import MySQLError
 
+# 数据库连接信息从环境变量读取，默认值覆盖最常见的本地开发场景。
+# 密码不写进代码：启动前先 export MUSIC_DB_PASSWORD=你的密码
 DB_CONFIG = {
-    "host": "127.0.0.1",
-    "port": 3306,
-    "user": "root",
-    "password": "MyStrongPassword123!",
-    "database": "music_platform",
+    "host": os.getenv("MUSIC_DB_HOST", "127.0.0.1"),
+    "port": int(os.getenv("MUSIC_DB_PORT", "3306")),
+    "user": os.getenv("MUSIC_DB_USER", "root"),
+    "password": os.getenv("MUSIC_DB_PASSWORD", ""),
+    "database": os.getenv("MUSIC_DB_NAME", "music_platform"),
     "charset": "utf8mb4",
     "cursorclass": pymysql.cursors.DictCursor
 }

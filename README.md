@@ -1,4 +1,4 @@
-# 河大放假音乐网 · music-platform
+# 心灵放假 · music-platform
 
 一个前后端分离的音乐网站：**Vue2 前端 + Flask 后端 + MySQL**，歌曲与歌单数据来自第三方网易云音乐 API。
 

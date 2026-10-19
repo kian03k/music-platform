@@ -41,7 +41,7 @@
     </el-dialog>
 
     <el-form ref="form_login" class="login-container" :model="form_login" :rules="rules_login">
-      <h3 class="login_title">河大放假音乐网</h3>
+      <h3 class="login_title">心灵放假</h3>
       <el-form-item label="用户名：" prop="name">
         <el-input v-model="form_login.name" placeholder="请输入账号"></el-input>
       </el-form-item>

@@ -79,7 +79,10 @@ def changePersonInfo():
 @app.route('/api/user/add', methods=['POST'])
 def createUser():
     info = request.get_json()
-    info['id'] = str(uuid.uuid1())
+    info['id'] = uuid.uuid1().hex
+
+    #把确认密码删掉，不存进数据库
+    info.pop('checkPass', None)
 
     if 'password' not in info:
         info['password'] = 'abc'

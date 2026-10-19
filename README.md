@@ -102,11 +102,6 @@ music-platform/
 └── scripts/dev.sh                  # 一键启动三个服务
 ```
 
-## 设计说明
-
-- **为什么前后端放一个仓库**：后端只有 ~350 行、历史提交个位数，而前端离开后端和网易云 API 都跑不起来 —— 拆成两个仓库反而让「clone 下来跑不起来」的门槛更高。三个部件放一起，README 一处讲清启动顺序即可。
-- **前端为什么需要 `.npmrc` 的 `shamefully-hoist`**：`@vue/cli-service` 5 依赖扁平的 `node_modules`，pnpm 默认的严格隔离会导致 `Cannot find module '@babel/preset-env'`。
-
 ## 已知问题
 
 - `src/utils/request.js` 与 `src/request/index.js` 是两套 axios 封装，分别指向 5000（业务接口）和 3000（音乐数据），地址是写死的，换机器/换端口需手动改。
